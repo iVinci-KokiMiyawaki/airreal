@@ -1,0 +1,32 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.7.0/schema.json",
+  "organizeImports": {
+    "enabled": true // import文の整理を有効化
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true // 推奨ルールを有効化
+    }
+  },
+  "formatter": {
+    "indentStyle": "space", // インデントはスペース
+    "lineWidth": 100 // 100文字で折り返し
+  },
+  "javascript": {
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true // パラメータデコレータを許可
+    },
+    "formatter": {
+      "arrowParentheses": "asNeeded", // 省略可能な引数の括弧
+      "semicolons": "asNeeded", // セミコロンは必要に応じて
+      "quoteStyle": "single", // クォートはシングルクォート
+      "jsxQuoteStyle": "single" // JSXのクォートもシングルクォート
+    }
+  },
+  "json": {
+    "parser": {
+      "allowComments": true // コメントを許可
+    }
+  }
+}

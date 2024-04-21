@@ -1,0 +1,36 @@
+---
+import BlogPostSummary from '@components/BlogPostSummary.astro'
+import Layout from '@layouts/Layout.astro'
+import { type Blog, getBlogs } from '@library/microcms'
+
+const response = await getBlogs({
+  fields: ['id', 'title', 'publishedAt', 'overview', 'content', 'eyecatch', 'category', 'tags'],
+})
+
+const posts = response.contents.map((post: Blog) => ({
+  slug: post.id,
+  title: post.title,
+  date: post.publishedAt,
+  overview: post.overview,
+  eyecatch: post.eyecatch.url,
+  category: post.category.name,
+  tags: post.tags,
+}))
+---
+
+<Layout title="My first blog with Astro">
+  <main>
+    <h1>Blog Posts</h1>
+    {posts.map((post) => (
+      <BlogPostSummary {...post} />
+    ))}
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 80ch;
+  }
+</style>
