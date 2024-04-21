@@ -25,7 +25,7 @@ const blog = await getBlogDetail(slug as string)
     <p class="publishedAt">公開日時：{format(blog.publishedAt, "yyyy-MM-dd")}</p>
     <div class="blog-post-meta">
       {blog.tags.map((tag) => (
-        <span key={tag.id} class="blog-post-tag">
+        <span class:list={["blog-post-tag"]} data-key={tag.id}>
           {`#${tag.name}`}
         </span>
       ))}
