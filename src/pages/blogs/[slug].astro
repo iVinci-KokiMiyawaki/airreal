@@ -20,7 +20,7 @@ const blog = await getBlogDetail(slug as string)
 ---
 
 <Layout title="My first blog with Astro">
-  <main>
+  <main class="container">
     <h1 class="title">{blog.title}</h1>
     <p class="publishedAt">公開日時：{format(blog.publishedAt, "yyyy-MM-dd")}</p>
     <div class="blog-post-meta">
@@ -35,7 +35,7 @@ const blog = await getBlogDetail(slug as string)
 </Layout>
 
 <style is:global>
-  main {
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
