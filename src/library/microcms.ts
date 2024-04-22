@@ -39,12 +39,28 @@ export type BlogsResponse = {
 
 //APIの呼び出し
 export const getBlogs = async (queries?: MicroCMSQueries) => {
-  return await client.get<BlogsResponse>({ endpoint: 'articles', queries })
+  return await client.get<BlogsResponse>({
+    endpoint: 'articles',
+    queries: {
+      ...queries,
+      filters: 'category[equals]zd8afe9dx2y',
+    },
+  })
 }
 export const getBlogDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   return await client.getListDetail<Blog>({
     endpoint: 'articles',
     contentId,
     queries,
+  })
+}
+
+export const getNewsPosts = async (queries?: MicroCMSQueries) => {
+  return await client.get<BlogsResponse>({
+    endpoint: 'articles',
+    queries: {
+      ...queries,
+      filters: 'category[equals]3609pxbtcrr7',
+    },
   })
 }

@@ -1,80 +1,72 @@
 ---
 import { Image } from 'astro:assets'
-import wepDevelopment from '@assets/images/website-development.png'
+import webDeveloper from '@assets/images/web-developer.png'
+import webSiteDevelopment from '@assets/images/website-development.png'
+import NewsSection from '@components/NewsSection.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title="InnovaTech - 革新的なITソリューションで未来を創造">
+<Layout title="AirReal - 革新的なITソリューションで未来を創造">
   <section class="hero">
     <h1>革新的なITソリューションで未来を創造</h1>
-    <p>InnovaTechは、最先端のテクノロジーを駆使して、お客様のビジネスの変革を支援します。</p>
+    <p>AirRealは、最先端のテクノロジーを駆使して、お客様のビジネスの変革を支援します。</p>
     <a href="/services" class="cta-button">サービス一覧を見る</a>
   </section>
 
-  <section class="services">
-    <div class="section-content">
-      <div class="text-content">
-        <h2>Services</h2>
-        <ul>
-          <li>クラウドインテグレーション</li>
-          <li>AIとビッグデータ分析</li>
-          <li>サイバーセキュリティ対策</li>
-          <li>カスタムソフトウェア開発</li>
-          <li>IoTソリューション</li>
-        </ul>
-      </div>
-      <div class="image-content">
-				<Image src={wepDevelopment} alt="Our Services" />
-      </div>
-    </div>
-  </section>
-
-  <section class="case-studies">
-    <div class="section-content">
-      <div class="image-content">
-        <Image src={wepDevelopment} alt="Case Studies" />
-      </div>
-      <div class="text-content">
-        <h2>Case Studies</h2>
-        <div class="case-study">
-          <h3>ABCテクノロジー株式会社</h3>
-          <p>InnovaTechのクラウドインテグレーションサービスにより、インフラコストを50%削減し、業務効率を大幅に向上しました。</p>
-          <a href="" class="read-more">詳しく読む</a>
+  <div class="content">
+    <section class="services">
+      <div class="section-content">
+        <div class="text-content">
+          <h2>Services</h2>
+          <ul>
+            <li>クラウドインテグレーション</li>
+            <li>AIとビッグデータ分析</li>
+            <li>サイバーセキュリティ対策</li>
+            <li>カスタムソフトウェア開発</li>
+            <li>IoTソリューション</li>
+          </ul>
         </div>
-        <div class="case-study">
-          <h3>XYZ金融株式会社</h3>
-          <p>InnovaTechのAIを活用した不正検知システムにより、不正取引を90%以上検出できるようになりました。</p>
-          <a href="/case-studies/xyz-finance" class="read-more">詳しく読む</a>
+        <div class="image-content">
+          <Image src={webSiteDevelopment} alt="Our Services" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="news">
-    <div class="section-content">
-      <div class="text-content">
-        <h2>News &amp; Events</h2>
-        <ul>
-          <li><a href="/news/new-office">InnovaTech、新オフィスを東京にオープン</a></li>
-          <li><a href="/events/tech-conference">InnovaTech主催の技術カンファレンスを開催</a></li>
-          <li><a href="/news/partnership">InnovaTech、大手クラウドベンダーとパートナーシップを締結</a></li>
-        </ul>
+    <section class="case-studies">
+      <div class="section-content">
+        <div class="image-content">
+          <Image src={webDeveloper} alt="Case Studies" />
+        </div>
+        <div class="text-content">
+          <h2>Case Studies</h2>
+          <div class="case-study">
+            <h3>ABCテクノロジー株式会社</h3>
+            <p>AirRealのクラウドインテグレーションサービスにより、インフラコストを50%削減し、業務効率を大幅に向上しました。</p>
+            <a href="" class="read-more">詳しく読む</a>
+          </div>
+          <div class="case-study">
+            <h3>XYZ金融株式会社</h3>
+            <p>AirRealのAIを活用した不正検知システムにより、不正取引を90%以上検出できるようになりました。</p>
+            <a href="/case-studies/xyz-finance" class="read-more">詳しく読む</a>
+          </div>
+        </div>
       </div>
-      <div class="image-content">
-        <Image src={wepDevelopment} alt="News and Events" />
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta">
-    <h2>Accelerate Innovation</h2>
-    <p>お客様のビジネスの成長に向けて、InnovaTechがお手伝いします。</p>
-    <a href="/contact" class="cta-button">お問い合わせ</a>
-  </section>
+    <NewsSection />
+
+    <section class="cta">
+      <h2>Accelerate Innovation</h2>
+      <p>お客様のビジネスの成長に向けて、AirRealがお手伝いします。</p>
+      <a href="/contact" class="cta-button">お問い合わせ</a>
+    </section>
+  </div>
 </Layout>
 
 <style>
-  /* ここにページ固有のスタイルを記述 */
+  .content {
+    margin: 0 10rem;
+  }
   .hero {
     background-color: #f4f4f4;
     text-align: center;
@@ -96,7 +88,7 @@ import Layout from '../layouts/Layout.astro'
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-		margin: 10rem;
+    margin: 10rem;
   }
 
   .text-content {
@@ -141,11 +133,11 @@ import Layout from '../layouts/Layout.astro'
     margin-bottom: 1rem;
   }
 
-	.cta {
-		/* 左右中央 */
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+  .cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
 </style>
