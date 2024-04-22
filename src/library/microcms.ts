@@ -64,3 +64,11 @@ export const getNewsPosts = async (queries?: MicroCMSQueries) => {
     },
   })
 }
+
+export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
+  return await client.getListDetail<Blog>({
+    endpoint: 'articles',
+    contentId,
+    queries,
+  })
+}
