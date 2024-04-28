@@ -1,13 +1,13 @@
 ---
 import Layout from '@layouts/blogs/Layout.astro'
-import { type Blog, getBlogDetail, getBlogs } from '@library/microcms'
+import { type Article, getBlogDetail, getBlogs } from '@library/microcms'
 import '@styles/blog.css'
 import { format } from 'date-fns'
 
 // 詳細記事ページの全パスを取得
 export async function getStaticPaths() {
   const response = await getBlogs({ fields: ['id'] })
-  return response.contents.map((content: Blog) => ({
+  return response.contents.map((content: Article) => ({
     params: {
       slug: content.id,
     },

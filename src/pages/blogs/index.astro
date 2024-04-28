@@ -1,13 +1,13 @@
 ---
 import BlogPostSummary from '@components/BlogPostSummary.astro'
 import Layout from '@layouts/Layout.astro'
-import { type Blog, getBlogs } from '@library/microcms'
+import { type Article, getBlogs } from '@library/microcms'
 
 const response = await getBlogs({
   fields: ['id', 'title', 'publishedAt', 'overview', 'content', 'eyecatch', 'category', 'tags'],
 })
 
-const posts = response.contents.map((post: Blog) => ({
+const posts = response.contents.map((post: Article) => ({
   slug: post.id,
   title: post.title,
   date: post.publishedAt,
