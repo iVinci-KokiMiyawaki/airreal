@@ -1,9 +1,9 @@
 ---
-import BlogPostSummary from '@components/BlogPostSummary.astro'
+import NewsPostSummary from '@components/NewsPostSummary.astro'
 import Layout from '@layouts/blogs/Layout.astro'
-import { type Article, getBlogs } from '@library/microcms'
+import { type Article, getNewsPosts } from '@library/microcms'
 
-const response = await getBlogs({
+const response = await getNewsPosts({
   fields: ['id', 'title', 'publishedAt', 'overview', 'content', 'eyecatch', 'category', 'tags'],
 })
 
@@ -20,9 +20,9 @@ const posts = response.contents.map((post: Article) => ({
 
 <Layout title="My first blog with Astro">
   <main>
-    <h1>Blog Posts</h1>
+    <h1>News Posts</h1>
     {posts.map((post) => (
-      <BlogPostSummary {...post} />
+      <NewsPostSummary  {...post} />
     ))}
   </main>
 </Layout>

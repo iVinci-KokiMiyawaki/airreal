@@ -20,11 +20,15 @@ const news = newsResponse.contents
       </li>
     ))}
   </ul>
+  <div class="news-more-content">
+    <a href="/news" class="news-more">もっと見る</a>
+  </div>
 </section>
 
 <style>
   .news-section {
     margin: 1rem;
+    max-width: 600px
   }
 
   .news-title {
@@ -63,5 +67,20 @@ const news = newsResponse.contents
   .news-item-date {
     color: #999;
     font-size: 0.9rem;
+  }
+
+  .news-more-content {
+    text-align: end;
+    margin-top: 1rem;
+  }
+  .news-more {
+    /* もっと見る用のリンクボタンのスタイル */
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
   }
 </style>
