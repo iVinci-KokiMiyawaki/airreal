@@ -144,4 +144,27 @@ import Layout from '../layouts/Layout.astro'
     align-items: center;
     margin-bottom: 10rem;
   }
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .section-content {
+    flex-direction: column;
+  }
+
+  .image-content {
+    justify-content: center;
+  }
+
+  .image-content img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
 </style>
