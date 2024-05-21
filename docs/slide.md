@@ -5,10 +5,16 @@ class: lead
 paginate: true
 footer: 'AirReal - 架空の企業サイト制作 -'
 ---
+<style>
+h1 {
+  position: fixed;
+  top: 7%;
+}
+</style>
 
 # AirReal - 架空の企業サイト制作 -
 ### Astro + microCMS を用いたサイト構築
-- 
+- 宮脇 光輝
 - 2024/05/22
 
 ---
@@ -33,49 +39,68 @@ footer: 'AirReal - 架空の企業サイト制作 -'
 
 ---
 
-# Astro
+# ![w:400](images/astro-logo.png)
 ### 概要:
 - 静的サイトジェネレーター
+  - HTMLファイルを事前に生成して高速な表示を実現
 - MPAを採用
+  - 複数のページを持つアプリケーションを効率的に管理
 
+---
+
+# ![w:400](images/astro-logo.png)
 ### 特徴:
 - 高速なページロード
+  - 事前生成されたHTMLにより、ページの表示が非常に速い
 - React、Vue、Svelteなどの統合
+  - 好みのフレームワークを使用して、柔軟な開発が可能
 - MarkdownやMDXのサポート
-
-![fit bg right](images/astro-logo.png)
+  - コンテンツをMarkdownで簡単に作成・管理
 
 ---
 
-# microCMS
+# ![w:400](images/microcms-logo.png)
 ### 概要:
 - ヘッドレスCMS
+  - フロントエンドと分離され、API経由でデータを提供
 - APIを通じたコンテンツ管理
-
-### 特徴:
-- ノーコードでコンテンツモデル構築
-- RESTful API提供
-- リアルタイムコンテンツ更新
-
-![fit bg right](images/microcms-logo.png)
+  - RESTful APIを使用して、データを柔軟に管理・取得
 
 ---
 
-# Cloudflare Pages
+# ![w:400](images/microcms-logo.png)
+### 特徴:
+- ノーコードでコンテンツモデル構築
+  - コーディングなしで、直感的にデータモデルを作成可能
+- RESTful API提供
+  - 標準化されたAPIで、他のサービスと簡単に連携。
+- リアルタイムコンテンツ更新
+  - 即時にコンテンツを更新し、反映可能
+
+---
+
+# ![w:400](images/cloudflare-logo.png)
 ### 概要:
 - 静的ホスティングサービス
+  - 静的サイトを迅速かつ効率的にホスティング
 - Gitリポジトリとの連携
+  - GitHubやGitLabと直接連携し、デプロイを自動化
 
+---
+
+# ![w:400](images/cloudflare-logo.png)
 ### 特徴:
 - エッジネットワーク
+  - 低遅延, 高速なコンテンツ配信, 信頼性向上
 - 継続的デプロイ
+  - 自動的にデプロイ実行
 - SSL/TLS証明書の自動提供
-
-![fit bg right](images/cloudflare-logo.png)
+  - 無料でSSL/TLS証明書が提供
 
 ---
 
 # デモンストレーション
+### 各環境
 - Astroの開発環境説明
 - microCMSでのコンテンツ管理のワークフロー
 - Cloudflare Pagesのデプロイ画面
