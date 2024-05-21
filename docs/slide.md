@@ -11,11 +11,30 @@ h1 {
   top: 7%;
 }
 </style>
+<style scoped>
+h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+}
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
 
 # AirReal - 架空の企業サイト制作 -
 ### Astro + microCMS を用いたサイト構築
-- 宮脇 光輝
-- 2024/05/22
+宮脇 光輝 2024/05/22
 
 ---
 
